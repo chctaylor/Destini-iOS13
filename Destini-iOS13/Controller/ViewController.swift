@@ -16,8 +16,6 @@ class ViewController: UIViewController {
     
     var storyBrain = StoryBrain()
     
-    //var journey = Story(title: "You see a fork in the road.", choice1: "Take a left.", choice2: "Take a right.")
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,7 +24,7 @@ class ViewController: UIViewController {
 
     @IBAction func choiceMade(_ sender: UIButton) {
         
-        storyBrain.nextStory(userChoice: sender.currentTitle!)
+        storyBrain.nextStory(sender.currentTitle!)
         
         updateUI()
     }
